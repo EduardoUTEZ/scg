@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Moneda" table="moneda">
+    	<comment>Mapeo tabla de Moneda</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        
+        <property name="claveMoneda">
+        	<column name="claveMoneda" length="3" not-null="true" sql-type="VARCHAR(3)"/>
+        </property>
+        
+        <property name="nombreMoneda">
+        	<column name="nombreMoneda" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+        
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+        <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+        
+        
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+        <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+        
+        
+                        		
+						                
+
+     </class>
+</hibernate-mapping>

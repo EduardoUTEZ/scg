@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="PresupuestoSolicitudR" table="aplicaPto_solicitudR">
+		<comment>Mapeo tabla de Solicitud de Reasignacion Presupuestal Aplica</comment>
+
+		<id name="id">
+			<column name="id" length="10" not-null="true" sql-type="INTEGER" />
+			<generator class="identity" />
+		</id>
+		<many-to-one name="solicitud" column="idSolicitudReasignacion"
+			class="com.segurosthona.scg.modelo.entidad.SolicitudReasignacionPresupuesto"
+			update="true" insert="true" lazy="false">
+		</many-to-one>
+
+		<many-to-one name="clavePresupuestariaOrigen" column="idClavePresupuestariaOrigen"
+			class="com.segurosthona.scg.modelo.entidad.ClavePresupuestaria"
+			update="true" insert="true" lazy="false">
+		</many-to-one>
+
+		<property name="mesPresupuestariaOrigen">
+			<column name="mesPresupuestariaOrigen" length="10" not-null="true"
+				sql-type="INTEGER" />
+		</property>
+
+
+		<many-to-one name="clavePresupuestariaDestino" column="idClavePresupuestariaDestino"
+			class="com.segurosthona.scg.modelo.entidad.ClavePresupuestaria"
+			update="true" insert="true" lazy="false">
+		</many-to-one>
+		<property name="mesPresupuestariaDestino">
+			<column name="mesPresupuestariaDestino" length="10" not-null="true"
+				sql-type="INTEGER" />
+		</property>
+		<property name="importe">
+			<column name="importe" length="100" not-null="true" sql-type="Double" />
+		</property>
+		<property name="pptoOrigenAntes">
+			<column name="pptoOrigenAntes" length="100" not-null="true"
+				sql-type="Double" />
+		</property>
+		<property name="pptoDestinoAntes">
+			<column name="pptoDestinoAntes" length="100" not-null="true"
+				sql-type="Double" />
+		</property>
+
+
+	</class>
+</hibernate-mapping>

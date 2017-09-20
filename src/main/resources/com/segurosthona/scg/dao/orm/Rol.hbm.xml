@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Rol" table="roles">
+    	<comment>Mapeo tabla de Roles</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        
+        <property name="nombre">
+        	<column name="nombre" length="100" not-null="true" sql-type="VARCHAR(60)"/>
+        </property>
+                        		
+		<set name="permisos" table="roles_permiso" cascade="save-update" lazy="false">
+			<key column="idRol"/>
+			<element column="permiso" length="30" type="java.lang.String"></element>								
+		</set>					                
+
+     </class>
+</hibernate-mapping>

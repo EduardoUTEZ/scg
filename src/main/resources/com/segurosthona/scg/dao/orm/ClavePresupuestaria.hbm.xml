@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="ClavePresupuestaria" table="clavepresupuestaria">
+    	<comment>Mapeo tabla de Clave Presupuestaria</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="empresa" column="idEmpresa" class="com.segurosthona.scg.modelo.entidad.Empresa"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+      	
+      	<property name="nivel1">
+        	<column name="nivel1" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel2">
+        	<column name="nivel2" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel3">
+        	<column name="nivel3" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel4">
+        	<column name="nivel4" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel5">
+        	<column name="nivel5" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel6">
+        	<column name="nivel6" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel7">
+        	<column name="nivel7" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel8">
+        	<column name="nivel8" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel9">
+        	<column name="nivel9" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel10">
+        	<column name="nivel10" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        
+      
+		
+		<property name="descripcion">
+        	<column name="descripcion" length="255" not-null="true" sql-type="Varchar(255)"/>
+        </property>
+        
+        <property name="cuentaContable">
+        	<column name="cuentaContable" length="50" not-null="true" sql-type="Varchar(50)"/>
+        </property>
+      
+        <property name="moneda" column="idMoneda">
+    		<type name="org.hibernate.type.EnumType">
+        	<param name="enumClass">com.segurosthona.scg.util.enums.Moneda</param>
+        	<param name="type">12</param>
+        	<param name="useNamed">true</param>	
+    		</type>
+		</property>
+		
+		<many-to-one name="usuarioResponsable" column="idUsuarioResponsable" class="com.segurosthona.scg.modelo.entidad.Usuario"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		<many-to-one name="usuarioSuplente" column="idUsuarioSuplente" class="com.segurosthona.scg.modelo.entidad.Usuario"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		
+		 <property name="version">
+        	<column name="version" length="10" not-null="true" sql-type="Varchar(10)"/>
+        </property>
+        <!--  <property name="anio">
+        	<column name="anio" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>-->
+      
+
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+            
+
+     </class>
+</hibernate-mapping>

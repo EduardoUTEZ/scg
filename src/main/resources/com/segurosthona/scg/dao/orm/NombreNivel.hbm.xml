@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="NombreNivel" table="nombrenivel">
+    	<comment>Mapeo tabla de Nombres de Niveles</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        
+        
+        <property name="idEmpresa">
+        	<column name="idEmpresa" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+        <property name="nivel1">
+        	<column name="nivel1" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel2">
+        	<column name="nivel2" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel3">
+        	<column name="nivel3" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel4">
+        	<column name="nivel4" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel5">
+        	<column name="nivel5" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel6">
+        	<column name="nivel6" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel7">
+        	<column name="nivel7" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel8">
+        	<column name="nivel8" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel9">
+        	<column name="nivel9" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="nivel10">
+        	<column name="nivel10" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        
+        
+        
+        
+        
+        
+        
+
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+            
+
+     </class>
+</hibernate-mapping>

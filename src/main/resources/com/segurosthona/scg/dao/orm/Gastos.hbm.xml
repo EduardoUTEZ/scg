@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Gastos" table="solicitud_gastos_empresa_usuario">
+    	<comment>Mapeo tabla de Gastos</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="empresa" column="idEmpresa" class="com.segurosthona.scg.modelo.entidad.Empresa"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		
+		<many-to-one name="usuario" column="idUsuario" class="com.segurosthona.scg.modelo.entidad.Usuario"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		
+		<many-to-one name="proveedor" column="idProveedor" class="com.segurosthona.scg.modelo.entidad.Proveedor"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		
+		
+		<property name="importe">
+        	<column name="importe" length="100" not-null="true" sql-type="Double"/>
+        </property>
+       
+       <many-to-one name="moneda" column="idMoneda" class="com.segurosthona.scg.modelo.entidad.Moneda"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+        
+         <property name="paridad">
+        	<column name="paridad" length="100" not-null="true" sql-type="Double"/>
+        </property>
+		
+       <property name="estatus">
+        	<column name="estatus" length="20" not-null="true" sql-type="VARCHAR(20)"/>
+        </property>
+        
+        
+       <property name="subestatus">
+        	<column name="subestatus" length="20" not-null="true" sql-type="VARCHAR(20)"/>
+        </property> 
+        
+        <property name="estadoFechaHora">
+        	<column name="statusFechaHora" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         
+         <property name="tipo">
+        	<column name="tipo" length="20" not-null="true" sql-type="VARCHAR(20)"/>
+        </property>
+        
+        <property name="descripcion">
+        	<column name="descripcion" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+        
+         <property name="justificacion">
+        	<column name="justificacion" length="255" not-null="true" sql-type="VARCHAR(255)"/>
+        </property>
+        
+        <property name="anexos">
+        	<column name="anexos"  not-null="true" sql-type="VARBINARY"/>
+        </property>
+        
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+        
+      
+        
+        <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+        
+        <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+        <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+        
+        
+        
+     </class>
+</hibernate-mapping>

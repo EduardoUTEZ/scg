@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+		">
+	
+	<!-- PROPERTIES -->
+	<context:annotation-config/>
+	<beans:bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	    <beans:property name="locations">
+	        <beans:list>
+	            <beans:value>classpath:/props/config.properties</beans:value>
+	        </beans:list>
+	    </beans:property>
+	    <beans:property name="ignoreUnresolvablePlaceholders" value="true" />
+	</beans:bean>
+	
+	<beans:bean id="messageSource" class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+	    <beans:property name="basenames">
+	        <beans:list>
+	           <beans:value>classpath:props/info</beans:value>
+	           <beans:value>classpath:props/messages</beans:value>
+	           <beans:value>classpath:props/labels</beans:value>
+	           <beans:value>classpath:props/menu</beans:value>
+	           <beans:value>classpath:props/help</beans:value>
+	        </beans:list>
+	    </beans:property>
+	</beans:bean>
+	
+	
+	<!-- Configuracion Spring Security -->
+    <beans:import resource="classpath:config/securityContext.xml"/>
+    
+	<!-- Configuracion base de datos -->
+	<beans:import resource="classpath:config/daoContext.xml"/>
+	
+	<!-- SERVICIOS -->
+	<context:component-scan base-package="com.segurosthona.scg.service"/>
+	
+	<!-- PERSISTENCIA -->
+	<context:component-scan base-package="com.segurosthona.scg.dao"/>
+	
+	<!-- COMPONENTES -->
+	<context:component-scan base-package="com.segurosthona.scg.util"/>
+	
+
+	<!-- TASK -->
+	<task:scheduler id="searchScheduler" pool-size="1"/>
+    <task:executor id="searchExecutor" pool-size="1"/>
+    <task:annotation-driven executor="searchExecutor" scheduler="searchScheduler"/>   	
+	
+	<!-- 	TRANSACTION MANAGER -->
+	<tx:annotation-driven/>
+	<beans:bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+        <beans:qualifier value="transactionManager"/>
+        <beans:property name="sessionFactory" ref="sessionFactory"/>
+    </beans:bean>
+    
+    <!-- MAIL -->
+    <jee:jndi-lookup id="mailSession" jndi-name="${email.jndi}" resource-ref="false" />
+	<beans:bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl" >
+		<beans:property name="session" ref="mailSession" />
+	</beans:bean>
+
+</beans:beans>

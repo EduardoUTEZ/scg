@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Empresa" table="empresas">
+    	<comment>Mapeo tabla de Empresa</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nombre">
+        	<column name="nombre" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+         <property name="rfc">
+        	<column name="rfc" length="12" not-null="true" sql-type="VARCHAR(12)"/>
+        </property>
+
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+            
+
+     </class>
+</hibernate-mapping>

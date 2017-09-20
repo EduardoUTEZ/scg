@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="SolicitudReasignacionPresupuesto" table="reasignacion_solicitud">
+    	<comment>Mapeo tabla de Solicitud de Reasignacion Presupuestal</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <many-to-one name="empresaGrupo" column="idEmpresaGrupo" class="com.segurosthona.scg.modelo.entidad.Empresa"
+			update="true" insert="true" lazy="false">		
+	    </many-to-one>
+        <property name="anio">
+        	<column name="anio" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+         <property name="motivo">
+        	<column name="motivo" length="255" not-null="true" sql-type="VARCHAR(255)"/>
+        </property>
+         <property name="estatus">
+        	<column name="estatus" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+         </property>
+             <property name="fechaEvaluacion">
+        	<column name="fechaEvaluacion" length="100" not-null="true" sql-type="Date"/>
+        </property>
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="30" not-null="true" sql-type="Varchar(30)"/>
+        </property>
+         <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="30" not-null="true" sql-type="Varchar(30)"/>
+        </property>
+         <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+            
+
+     </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="BitacoraAcceso" table="bitacora_acceso">
+    	<comment>Mapeo tabla de Bitacora de Acceso</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nombreAcceso">
+        	<column name="nombreAcceso" length="100" not-null="true" sql-type="VARCHAR(60)"/>
+        </property>
+
+         <property name="fechaAcceso">
+        	<column name="fechaAcceso" length="20" not-null="true" sql-type="Date"/>
+        </property>
+       
+     </class>
+</hibernate-mapping>

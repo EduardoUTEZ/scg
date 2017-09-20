@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Proveedor" table="proveedores">
+    	<id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+     <many-to-one name="empresaGrupo" column="idEmpresaGrupo" class="com.segurosthona.scg.modelo.entidad.Empresa"
+			update="true" insert="true" lazy="false">		
+	 </many-to-one>
+        <property name="tipoProveedor">
+        	<column name="tipoProveedor" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        <property name="razonSocial">
+        	<column name="razonSocial" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+         <property name="nombre">
+        	<column name="nombre" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+        <property name="primerApellido">
+        	<column name="primerApellido" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+         <property name="segundoApellido">
+        	<column name="segundoApellido" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+         <property name="rfc">
+        	<column name="rfc" length="13" not-null="true" sql-type="VARCHAR(13)"/>
+        </property>
+        
+         <property name="dirCalle">
+        	<column name="dirCalle" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+       
+        <property name="dirNoExt">
+        	<column name="dirNoExt" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+        
+         <property name="dirNoInt">
+        	<column name="dirNoInt" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+        
+        <property name="dirCol">
+        	<column name="dirCol" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+        
+           <property name="dirMunDel">
+        	<column name="dirMunDel" length="100" not-null="true" sql-type="VARCHAR(100)"/>
+        </property>
+        
+           <property name="dirEstado">
+        	<column name="dirEstado" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+        
+            <property name="dirPais">
+        	<column name="dirPais" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+        
+        <property name="dirCP">
+        	<column name="dirCP" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+        
+        <property name="telefono">
+        	<column name="telefono" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+        
+        
+         <property name="contrato">
+        	<column name="contrato" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+        
+         <property name="retenciones">
+        	<column name="retenciones" length="2" not-null="true" sql-type="VARCHAR(2)"/>
+        </property>
+        
+         <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+           <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="false" sql-type="Date"/>
+        </property>
+        
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="30" not-null="true" sql-type="VARCHAR(30)"/>
+        </property>
+        
+        
+        <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="false" sql-type="Date"/>
+        </property>
+        
+         <property name="estado">
+        	<column name="estado" length="10" not-null="false" sql-type="INTEGER"/>
+        </property>
+        
+        
+         
+         <property name="banco">
+        	<column name="banco" length="50" not-null="true" sql-type="VARCHAR (50)"/>
+        </property>
+        
+        <property name="cuentaBanco">
+        	<column name="cuentaBanco" length="20" not-null="true" sql-type="VARCHAR (20)"/>
+        </property>
+     </class>
+</hibernate-mapping>

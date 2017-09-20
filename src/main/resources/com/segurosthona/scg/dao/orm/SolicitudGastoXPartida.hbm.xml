@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="SolicitudGastoXPartida" table="solicitud_gasto_partida">
+    	<comment>Mapeo tabla de Solicitud de Gastos por Partida</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        
+        <many-to-one name="gasto" column="idSolicitudGasto" class="com.segurosthona.scg.modelo.entidad.Gastos"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+		
+		<many-to-one name="presupuesto" column="idPresupuesto" class="com.segurosthona.scg.modelo.entidad.Presupuesto"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+        
+        <property name="importe">
+        	<column name="importe" length="100" not-null="true" sql-type="Double"/>
+        </property>
+        
+         <property name="anio">
+        	<column name="anio" length="4" not-null="true" sql-type="INTEGER"/>
+        </property>
+        
+        <property name="mes">
+        	<column name="mes" length="4" not-null="true" sql-type="INTEGER"/>
+        </property>
+        
+                                    		
+		<property name="ivaAplicable">
+        	<column name="ivaApicable" length="10" not-null="true" sql-type="VARCHAR(10)"/>
+        </property>
+						                
+
+        <property name="idArticulo">
+        	<column name="idArticulo" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+         
+         
+        <property name="descripcion">
+        	<column name="descripcion" length="255" not-null="true" sql-type="VARCHAR(255)"/>
+        </property>
+					
+         
+          <property name="unidad">
+        	<column name="unidad" length="50" not-null="true" sql-type="VARCHAR(50)"/>
+        </property>
+					  
+         <property name="cantidad">
+        	<column name="cantidad" length="10" not-null="true" sql-type="INTEGER"/>
+        </property>
+        
+        <property name="precioUnitario">
+        	<column name="precioUnitario" length="100" not-null="true" sql-type="Double"/>
+        </property>
+
+     </class>
+</hibernate-mapping>

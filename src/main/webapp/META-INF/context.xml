@@ -1,0 +1,31 @@
+<Context path="/SCG" docBase="scg" debug="0" reloadable="true" antiJARLocking="true" antiResourceLocking="true">
+    <!-- Specify a JDBC datasource -->
+    
+    
+    <Resource name="jdbc/scg" 
+              auth="Container"
+              type="javax.sql.DataSource" 
+              username="sadsscom_scg" 
+              password="sads2017"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost/sadsscom_scg"
+              validationQuery="select 1"
+              maxActive="5" 
+              maxIdle="10"
+			  maxWait="5000"/>
+			  
+	<Resource name="mail/scgMail" auth="Container"
+            type="javax.mail.Session"
+            mail.transport.protocol="smtp"
+            mail.smtp.host="smtp.gmail.com"
+			mail.smtp.starttls.enable="true"
+			mail.smtp.port="587"
+			mail.smtp.auth="true"
+			mail.smtp.user="pruebas.sads@gmail.com"
+			password="popolopo"
+			
+			/>
+			  	  
+	<WatchedResource>WEB-INF/web.xml</WatchedResource>
+
+ </Context>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Presupuesto" table="presupuesto_clavepresupuestaria">
+    	<comment>Mapeo tabla de Presupuesto</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+      
+      	
+      	<property name="idClavePresupuestaria">
+        	<column name="idClavePresupuestaria" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        <property name="anio">
+        	<column name="anio" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        <property name="mes">
+        	<column name="mes" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        
+        <property name="pptoProgramado">
+        	<column name="pptoProgramado" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        
+        <property name="pptoComprometido">
+        	<column name="pptoComprometido" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        
+        <property name="pptoEjercido">
+        	<column name="pptoEjercido" length="10" not-null="true" sql-type="Integer"/>
+        </property>
+        
+        
+
+     </class>
+</hibernate-mapping>

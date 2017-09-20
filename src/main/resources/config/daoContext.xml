@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+		http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+	
+	<jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/scg" resource-ref="false"/>
+	
+	<!-- 	CONFIG MYSQ -->
+	<beans:bean id="hibernateProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+		<beans:property name="properties">
+			<beans:props>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</beans:prop>
+				<beans:prop key="hibernate.max_fetch_depth">3</beans:prop>
+				<beans:prop key="hibernate.jdbc.fetch_size">100</beans:prop>
+				<beans:prop key="hibernate.jdbc.batch_size">10</beans:prop>
+				<beans:prop key="hibernate.show_sql">true</beans:prop>
+				<beans:prop key="hibernate.format_sql">true</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"
+		p:dataSource-ref="dataSource" 
+		p:mappingResources-ref="hibernateMappingResources" 
+		p:hibernateProperties-ref="hibernateProperties"/>
+		
+	<util:list id="hibernateMappingResources">
+		
+		<beans:value>com/segurosthona/scg/dao/orm/Proveedor.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Rol.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Usuario.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/BitacoraAcceso.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Empresa.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/NombreNivel.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/ClavePresupuestaria.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Presupuesto.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/EmpresaGrupo.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/SolicitudReasignacion.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/SolicitudReasignacionAprobadaPpto.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Moneda.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/Gastos.hbm.xml</beans:value>
+		<beans:value>com/segurosthona/scg/dao/orm/SolicitudGastoXPartida.hbm.xml</beans:value>
+		
+	</util:list>
+	
+	
+	
+</beans:beans>

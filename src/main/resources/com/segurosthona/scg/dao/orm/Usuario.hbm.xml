@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.segurosthona.scg.modelo.entidad">
+	<class name="Usuario" table="usuarios">
+    	<comment>Mapeo tabla de Usuarios</comment>
+    	
+        <id name="id">
+            <column name="id" length="10" not-null="true" sql-type="INTEGER"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nombreAcceso">
+        	<column name="nombreAcceso" length="100" not-null="true" sql-type="VARCHAR(60)"/>
+        </property>
+         <property name="claveAcceso">
+        	<column name="claveAcceso" length="100" not-null="true" sql-type="VARCHAR(60)"/>
+        </property>
+         <property name="estado" column="estado">
+    		<type name="org.hibernate.type.EnumType">
+        	<param name="enumClass">com.segurosthona.scg.util.enums.EstadoUsuario</param>
+    		</type>
+		</property>
+         <property name="nombre">
+        	<column name="nombre" length="100" not-null="true" sql-type="VARCHAR(60)"/>
+        </property>
+        <property name="correoElectronico">
+        	<column name="correoElectronico" length="100" not-null="true" sql-type="VARCHAR(80)"/>
+        </property>
+             
+        <many-to-one name="rol" column="idRol" class="com.segurosthona.scg.modelo.entidad.Rol"
+			update="true" insert="true" lazy="false">		
+		</many-to-one>
+        
+        <property name="cambioClave">
+        	<column name="cambioClave" length="100" not-null="true" sql-type="Boolean"/>
+        </property>
+         
+        <property name="usuarioAlta">
+        	<column name="usuarioAlta" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaAlta">
+        	<column name="fechaAlta" length="100" not-null="true" sql-type="Date"/>
+        </property>
+         <property name="usuarioModifica">
+        	<column name="usuarioModifica" length="100" not-null="true" sql-type="Varchar(45)"/>
+        </property>
+         <property name="fechaModifica">
+        	<column name="fechaModifica" length="100" not-null="true" sql-type="Date"/>
+        </property>
+            
+
+     </class>
+</hibernate-mapping>

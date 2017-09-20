@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+						http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+ 
+<!--  	Rutas que se ignoraran  -->
+	<security:http pattern="/css/**" security="none"/>
+	<security:http pattern="/assets/**" security="none"/>
+	<security:http pattern="/img/**" security="none"/>
+	<security:http pattern="/js/**" security="none"/>
+ 	<security:http pattern="/login*" security="none"/>
+ 	<security:http pattern="/archivosSistema/*" security="none"/>
+ 	<security:http pattern="/recovery/*" security="none"/>
+ 	<security:http pattern="/recovery/initRecovery/*" security="none"/>
+ 	
+ 	<security:http pattern="/lock*" use-expressions="true" auto-config="true">
+ 		 <security:intercept-url pattern="/lock*" access="permitAll" />
+ 	</security:http>
+ 	
+ 	
+    <security:http  
+    	auto-config="true" use-expressions="true"  
+    	authentication-manager-ref="authenticationManager" 
+    	access-denied-page="/denegado" >
+        <security:intercept-url pattern="/**" access="isAuthenticated()" />
+        <security:form-login login-page="/login"  authentication-failure-url="/loginfailed" authentication-success-handler-ref="successHandler" />
+        <security:logout invalidate-session="true" logout-success-url="/" />
+    </security:http>
+    
+    <bean id="successHandler"
+	class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+	<property name="defaultTargetUrl" value="/init"/>
+	<property name="alwaysUseDefaultTargetUrl" value="true"/>
+	</bean>
+    
+	<security:authentication-manager alias="authenticationManager" erase-credentials="false" >
+		<security:authentication-provider>
+			<security:password-encoder hash="md5" />
+
+			<security:jdbc-user-service
+				data-source-ref="dataSource"
+
+				users-by-username-query="
+		      select nombreAcceso as username, claveAcceso as password, if(estado =1,true, false) as enabled
+				from usuarios where nombreAcceso=?"
+
+				authorities-by-username-query="
+		      select u.nombreAcceso as username, p.permiso as authority
+				from usuarios u, roles_permiso p where u.idRol = p.idRol and u.nombreAcceso=?" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<security:global-method-security pre-post-annotations="enabled" />
+
+    
+</beans>  

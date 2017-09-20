@@ -1,0 +1,705 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="oficinas" pageWidth="4464" pageHeight="612" orientation="Landscape" columnWidth="4444" leftMargin="0" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1541d1e4-2225-4bf2-8792-da4a7d0c15ff">
+	<property name="ireport.zoom" value="1.5000000000000027"/>
+	<property name="ireport.x" value="3485"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset2" uuid="ee3af7f3-aca4-431d-9976-b6f4626457cb">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="beneficiarios" class="java.util.List">
+			<fieldDescription><![CDATA[beneficiarios]]></fieldDescription>
+		</field>
+		<field name="certificado" class="java.lang.Integer">
+			<fieldDescription><![CDATA[certificado]]></fieldDescription>
+		</field>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="edad" class="java.lang.Integer">
+			<fieldDescription><![CDATA[edad]]></fieldDescription>
+		</field>
+		<field name="estadoCivil" class="java.lang.Integer">
+			<fieldDescription><![CDATA[estadoCivil]]></fieldDescription>
+		</field>
+		<field name="estatus" class="com.segurosargos.scg.modelo.entidad.Estado">
+			<fieldDescription><![CDATA[estatus]]></fieldDescription>
+		</field>
+		<field name="fechaBorrado" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaBorrado]]></fieldDescription>
+		</field>
+		<field name="fechaCancela" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaCancela]]></fieldDescription>
+		</field>
+		<field name="fechaConfirma" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaConfirma]]></fieldDescription>
+		</field>
+		<field name="fechaExtrae" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaExtrae]]></fieldDescription>
+		</field>
+		<field name="fechaFinVigencia" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaFinVigencia]]></fieldDescription>
+		</field>
+		<field name="fechaInicioVigencia" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaInicioVigencia]]></fieldDescription>
+		</field>
+		<field name="fechaNacimiento" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaNacimiento]]></fieldDescription>
+		</field>
+		<field name="fechaRegistro" class="java.util.Date">
+			<fieldDescription><![CDATA[fechaRegistro]]></fieldDescription>
+		</field>
+		<field name="folioPoliza" class="java.lang.Long">
+			<fieldDescription><![CDATA[folioPoliza]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[nombre]]></fieldDescription>
+		</field>
+		<field name="primerApellido" class="java.lang.String">
+			<fieldDescription><![CDATA[primerApellido]]></fieldDescription>
+		</field>
+		<field name="rfc" class="java.lang.String">
+			<fieldDescription><![CDATA[rfc]]></fieldDescription>
+		</field>
+		<field name="segundoApellido" class="java.lang.String">
+			<fieldDescription><![CDATA[segundoApellido]]></fieldDescription>
+		</field>
+		<field name="sexo" class="java.lang.Integer">
+			<fieldDescription><![CDATA[sexo]]></fieldDescription>
+		</field>
+		<field name="usuarioBorra" class="java.lang.String">
+			<fieldDescription><![CDATA[usuarioBorra]]></fieldDescription>
+		</field>
+		<field name="usuarioCancela" class="java.lang.String">
+			<fieldDescription><![CDATA[usuarioCancela]]></fieldDescription>
+		</field>
+		<field name="usuarioConfirma" class="java.lang.String">
+			<fieldDescription><![CDATA[usuarioConfirma]]></fieldDescription>
+		</field>
+		<field name="usuarioExtrae" class="java.lang.String">
+			<fieldDescription><![CDATA[usuarioExtrae]]></fieldDescription>
+		</field>
+		<field name="usuarioRegistra" class="java.lang.String">
+			<fieldDescription><![CDATA[usuarioRegistra]]></fieldDescription>
+		</field>
+	</subDataset>
+	<subDataset name="dataset1" uuid="d8eec6c6-a3db-4161-98cc-25f31793119c">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="class" class="java.lang.Class">
+			<fieldDescription><![CDATA[class]]></fieldDescription>
+		</field>
+		<field name="id" class="java.lang.Integer">
+			<fieldDescription><![CDATA[id]]></fieldDescription>
+		</field>
+		<field name="idAsegurado" class="java.lang.Integer">
+			<fieldDescription><![CDATA[idAsegurado]]></fieldDescription>
+		</field>
+		<field name="nombre" class="java.lang.String">
+			<fieldDescription><![CDATA[nombre]]></fieldDescription>
+		</field>
+		<field name="parentesco" class="java.lang.String">
+			<fieldDescription><![CDATA[parentesco]]></fieldDescription>
+		</field>
+		<field name="porcentaje" class="java.lang.Integer">
+			<fieldDescription><![CDATA[porcentaje]]></fieldDescription>
+		</field>
+		<field name="primerApellido" class="java.lang.String">
+			<fieldDescription><![CDATA[primerApellido]]></fieldDescription>
+		</field>
+		<field name="segundoApellido" class="java.lang.String">
+			<fieldDescription><![CDATA[segundoApellido]]></fieldDescription>
+		</field>
+	</subDataset>
+	<queryString language="SQ">
+		<![CDATA[]]>
+	</queryString>
+	<field name="beneficiarios" class="java.util.List">
+		<fieldDescription><![CDATA[beneficiarios]]></fieldDescription>
+	</field>
+	<field name="certificado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[certificado]]></fieldDescription>
+	</field>
+	<field name="class" class="java.lang.Class">
+		<fieldDescription><![CDATA[class]]></fieldDescription>
+	</field>
+	<field name="edad" class="java.lang.Integer">
+		<fieldDescription><![CDATA[edad]]></fieldDescription>
+	</field>
+	<field name="estadoCivil" class="java.lang.Integer">
+		<fieldDescription><![CDATA[estadoCivil]]></fieldDescription>
+	</field>
+	<field name="estatus" class="com.segurosargos.scg.modelo.entidad.Estado">
+		<fieldDescription><![CDATA[estatus]]></fieldDescription>
+	</field>
+	<field name="fechaBorrado" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaBorrado]]></fieldDescription>
+	</field>
+	<field name="fechaCancela" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaCancela]]></fieldDescription>
+	</field>
+	<field name="fechaConfirma" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaConfirma]]></fieldDescription>
+	</field>
+	<field name="fechaExtrae" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaExtrae]]></fieldDescription>
+	</field>
+	<field name="fechaFinVigencia" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaFinVigencia]]></fieldDescription>
+	</field>
+	<field name="fechaInicioVigencia" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaInicioVigencia]]></fieldDescription>
+	</field>
+	<field name="fechaNacimiento" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaNacimiento]]></fieldDescription>
+	</field>
+	<field name="fechaRegistro" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaRegistro]]></fieldDescription>
+	</field>
+	<field name="folioPoliza" class="java.lang.Long">
+		<fieldDescription><![CDATA[folioPoliza]]></fieldDescription>
+	</field>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[id]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nombre]]></fieldDescription>
+	</field>
+	<field name="primerApellido" class="java.lang.String">
+		<fieldDescription><![CDATA[primerApellido]]></fieldDescription>
+	</field>
+	<field name="rfc" class="java.lang.String">
+		<fieldDescription><![CDATA[rfc]]></fieldDescription>
+	</field>
+	<field name="segundoApellido" class="java.lang.String">
+		<fieldDescription><![CDATA[segundoApellido]]></fieldDescription>
+	</field>
+	<field name="sexo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[sexo]]></fieldDescription>
+	</field>
+	<field name="usuarioBorra" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioBorra]]></fieldDescription>
+	</field>
+	<field name="usuarioCancela" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioCancela]]></fieldDescription>
+	</field>
+	<field name="usuarioConfirma" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioConfirma]]></fieldDescription>
+	</field>
+	<field name="usuarioExtrae" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioExtrae]]></fieldDescription>
+	</field>
+	<field name="usuarioRegistra" class="java.lang.String">
+		<fieldDescription><![CDATA[usuarioRegistra]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="1400" height="20" forecolor="#000000" uuid="ab89ba3f-bf76-4455-a5c1-ffc07484be22"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Extracción de Asegurados]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="48" uuid="8c20dd85-65bc-40e0-8c42-5d13f78dbcc6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Asegurado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="0" width="74" height="48" uuid="15e0efd7-a344-4d58-a901-beda6a6b4d3d"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Dependientes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="174" y="0" width="60" height="48" uuid="2497eaa8-ede2-4518-b759-9aea85647099"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número de Subgrupo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="234" y="0" width="100" height="48" uuid="d6dea0d4-2474-42bb-aee6-654fcc091140"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Nacimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="0" width="60" height="48" uuid="1902ab1c-6e61-4137-b15c-999723299786"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clave parentesco]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="394" y="0" width="303" height="48" uuid="5aa20bb6-87a4-449a-8e3b-ae249a5c4340"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="697" y="0" width="85" height="48" uuid="3e933ffd-8808-4e73-b21d-a5fb1ad1acd8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clave de Sexo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="782" y="0" width="61" height="48" uuid="f7c824f1-8659-4066-a6b9-949b260e8c69"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Clave de Fumador]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="843" y="0" width="61" height="48" uuid="8cd17d31-8304-4dc6-b812-b6d1a70385b8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad Real]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="904" y="0" width="61" height="48" uuid="b2a542c5-c8e2-4921-9e1d-de5a24e052fd"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Edad Calculada]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="965" y="0" width="61" height="48" uuid="b6d72039-2ad1-47cc-bb03-08bab5c8a298"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Riesgo ocupacional]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1026" y="0" width="61" height="48" uuid="7de0ffd0-e51b-4b95-9928-612a827aed99"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adscripción]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1087" y="0" width="61" height="48" uuid="89440a02-d894-49ef-855b-5c7ecb663917"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Puesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1148" y="0" width="59" height="48" uuid="a56e1575-cef0-49d8-a9a4-d0388fddac60"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado Civil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1207" y="0" width="61" height="48" uuid="9b46fe31-34ae-4cfc-b75f-bbc19ba2ffbe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de ingreso a la empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1270" y="0" width="59" height="48" uuid="52c47868-6580-4bf7-84c3-6f63e64f0238"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sueldo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1329" y="0" width="61" height="48" uuid="b5f7c52f-70b6-43c9-b794-eb23f0844695"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Zona]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1390" y="0" width="61" height="48" uuid="75ba4b75-1643-4f56-879e-4eb3b705b935"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de ubicación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1451" y="0" width="61" height="48" uuid="312808db-a246-4b29-8689-df2127b8afee"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Alta]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1512" y="0" width="61" height="48" uuid="1e30e1c0-fc5c-49f8-8fd2-fd9f321b1e34"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de Baja]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1573" y="0" width="61" height="48" uuid="59e6cc60-c933-4474-ad26-37689cb0f9c4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Movimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1634" y="0" width="61" height="48" uuid="fefc8ad9-11e1-4102-a6fe-fb30340f16b1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Integrantes Zeus Salud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1695" y="0" width="61" height="48" uuid="f4a17a5c-b815-448f-b61d-2184870cb7d7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Asistencia Thona]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1756" y="0" width="61" height="48" uuid="a30e6e37-601a-4642-bd1c-721271e01ffb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Repatriación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1817" y="0" width="61" height="48" uuid="9675ef38-535b-4584-8a15-344ded4ba86b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Básica]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1878" y="0" width="54" height="48" uuid="e40b5831-54dc-48e8-81c7-dfdd355f62fb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1932" y="0" width="54" height="48" uuid="8d4e808d-13f9-4c13-9502-1745f1a0618a"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 01]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1986" y="0" width="54" height="48" uuid="26daea77-b1c2-4ac4-a839-3a59d1c74113"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 02]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2040" y="0" width="54" height="48" uuid="448b0266-03cf-4b08-a4ba-9e68b894459b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 03]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2094" y="0" width="54" height="48" uuid="291d7f05-e430-456c-83fc-1e7b479824bf"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 04]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2148" y="0" width="54" height="48" uuid="6a407591-ea94-4bfc-b1e7-c6e34f9a558f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 05]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2202" y="0" width="54" height="48" uuid="c7f057ee-fa9e-4c82-b0aa-b801d3bb6eb7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 06]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2256" y="0" width="54" height="48" uuid="eb67803a-c915-46ce-9d92-fb7bfa9df93c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 07]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2310" y="0" width="54" height="48" uuid="f02d1e59-19f8-4f8c-b2e7-b92c536206eb"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 08]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2364" y="0" width="54" height="48" uuid="ad011e92-7347-4c53-8442-e8b9f2530f97"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 09]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2418" y="0" width="54" height="48" uuid="a5e3869c-eaa9-46cc-88da-194d338cbe78"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2472" y="0" width="54" height="48" uuid="f4422ccc-f7fd-44f0-89de-5a25220c2bcc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2526" y="0" width="54" height="48" uuid="07d61e4f-2e3e-458a-97b9-b9608da70cbe"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[SA Adic 12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2580" y="0" width="356" height="48" uuid="c7162ee2-4287-456e-a52b-b8d856d33408"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Beneficiario 1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2936" y="0" width="356" height="48" uuid="85bc78eb-6432-4bb9-b2b4-5a46686af4a7"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Beneficiario 2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3292" y="0" width="356" height="48" uuid="ebcb691d-8bf5-49e0-a4bc-ad5b1a0ca4de"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Beneficiario 3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="3648" y="0" width="356" height="48" uuid="33749242-ef08-48f9-b9a4-513caeda1d6b"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Beneficiario 4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="4004" y="0" width="356" height="48" uuid="1ba84059-d13b-4f45-90f8-988cfddd7318"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre del Beneficiario 5]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="b813b7eb-47c9-4e94-8c83-d2b83d1e9a9d"/>
+				<textFieldExpression><![CDATA[$F{certificado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="0" width="74" height="20" uuid="a16af7c5-50ff-41ca-8a17-07e8f767d4c6"/>
+				<textFieldExpression><![CDATA[0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="174" y="0" width="60" height="20" uuid="71cbd7f0-922e-461b-9752-cd6d969f4d7e"/>
+				<textFieldExpression><![CDATA[1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="234" y="0" width="100" height="20" uuid="bf9d9131-bba7-4513-a400-1e28bcec38f6"/>
+				<textFieldExpression><![CDATA[
+new SimpleDateFormat("dd/MM/yyyy").format($F{fechaNacimiento})]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="60" height="20" uuid="26a5f7e3-d21e-4b6e-84c6-247d9bd19646"/>
+				<textFieldExpression><![CDATA[0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="394" y="0" width="303" height="20" uuid="0b156f43-e211-46ba-8a5b-e2456e087533"/>
+				<textFieldExpression><![CDATA[$F{primerApellido}+"/"+$F{segundoApellido}+"/"+$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="697" y="0" width="85" height="20" uuid="960da8c3-5aa1-498b-a690-d9ee39781ca9"/>
+				<textFieldExpression><![CDATA[$F{sexo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="782" y="0" width="61" height="20" uuid="be58d1b9-390f-4c15-a2a4-c27ddf2e9024"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="782" y="0" width="61" height="20" uuid="98751e46-e1d8-40fa-907e-577513653beb"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="843" y="0" width="61" height="20" uuid="63196911-a6c5-4618-8c3a-abfbf1eb7bbb"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="904" y="0" width="61" height="20" uuid="8f65665a-be3f-4902-83e8-f4a960278d70"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="965" y="0" width="61" height="20" uuid="57fe5cd3-3cf1-4bc0-ba5f-ca05ca5a6c12"/>
+				<textFieldExpression><![CDATA[1]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1026" y="0" width="61" height="20" uuid="8ca4f772-d7d3-4120-8f86-8e42ade024e7"/>
+				<textFieldExpression><![CDATA["ADS1"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1087" y="0" width="61" height="20" uuid="f6a2aba9-1b82-44de-881a-44a5c76f5148"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1148" y="0" width="59" height="20" uuid="45adc1f1-5d96-471b-abe2-bd8142e64d1c"/>
+				<textFieldExpression><![CDATA[$F{estadoCivil}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1207" y="0" width="61" height="20" uuid="9bd498a3-cb2c-4cf5-982e-c97b0bdddffe"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1268" y="0" width="61" height="20" uuid="a0ddaa54-b74e-467d-9399-0081f0ed2013"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1329" y="0" width="61" height="20" uuid="0b2ea9ab-8f09-4639-8b2c-467ecd4b2998"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1390" y="0" width="61" height="20" uuid="700e582d-5a38-4231-8005-714d910c4083"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1451" y="0" width="61" height="20" uuid="955031ed-37fb-4bc5-96eb-e77c6b78226f"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1512" y="0" width="61" height="20" uuid="97d2d24d-c691-4e29-be9a-e58f2bac976a"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1573" y="0" width="61" height="20" uuid="d63338ef-a464-4bce-a148-3fd70b3dffc6"/>
+				<textFieldExpression><![CDATA[1]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1634" y="0" width="61" height="20" uuid="8ee07f32-e477-4c8b-87f7-6a594f8871d8"/>
+				<textFieldExpression><![CDATA[5]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1695" y="0" width="61" height="20" uuid="66cf3fb7-a9bd-40e6-aaf4-3696a61261cf"/>
+				<textFieldExpression><![CDATA[0]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="1756" y="0" width="61" height="20" uuid="a2623d66-b01c-4f43-86c6-de757e786e2d"/>
+				<textFieldExpression><![CDATA[0]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1817" y="0" width="61" height="20" uuid="59a0171b-5ddc-4ad1-b611-4f5de69fa431"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1878" y="0" width="54" height="20" uuid="117b82ac-9a5b-4c6c-b811-6ae1660b2242"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1932" y="0" width="54" height="20" uuid="d2c70901-cb64-45dc-acb1-cf8384fab8ad"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1986" y="0" width="54" height="20" uuid="81803c8a-63c3-49f8-bda6-a55a95eee03d"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2040" y="0" width="54" height="20" uuid="0533ef9d-c1cd-4f50-a141-8eebca80f514"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2094" y="0" width="54" height="20" uuid="45d87c87-f0b4-4155-8375-67c40c8a9c34"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2148" y="0" width="54" height="20" uuid="b22ef489-90f1-4e87-a0e7-edd6e554c7a0"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2202" y="0" width="54" height="20" uuid="f38295c2-5432-411a-bc81-362f43c5a431"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2256" y="0" width="54" height="20" uuid="df7b8d2f-60a0-49c3-a5bd-f67ce0e43048"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2310" y="0" width="54" height="20" uuid="18db83ea-0794-48a5-a0b8-187186238e10"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2364" y="0" width="54" height="20" uuid="02923539-edab-40d9-8591-10d784552523"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2418" y="0" width="54" height="20" uuid="17753288-10aa-483b-b2ca-ec1c811e1b21"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2472" y="0" width="54" height="20" uuid="38b38b35-18e6-4478-9880-d79bdd672f2f"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="2526" y="0" width="54" height="20" uuid="0eee3add-4258-4508-939f-eeac4c309242"/>
+				<textFieldExpression><![CDATA[]]></textFieldExpression>
+			</textField>
+			<componentElement>
+				<reportElement x="2580" y="0" width="1780" height="20" isPrintInFirstWholeBand="true" uuid="253cebd4-cbea-4d87-97dc-5620369437b4"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Horizontal">
+					<datasetRun subDataset="dataset1" uuid="ca11bd01-1161-4f32-a8ff-5ba59c56bd4a">
+						<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{beneficiarios})]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="20" width="356">
+						<textField>
+							<reportElement x="0" y="0" width="356" height="20" uuid="29e46897-706e-4370-a3fd-2c043c193c7e"/>
+							<textFieldExpression><![CDATA[$F{primerApellido}+"/"+$F{segundoApellido}+"/"+$F{nombre}+"/"+$F{parentesco}+"/"+$F{porcentaje}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="33" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

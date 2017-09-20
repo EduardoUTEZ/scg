@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+	<definition name="defaultTemplate" template="/WEB-INF/views/template/main.jsp">
+
+		<put-attribute name="styles" value="" />
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="Seguros Thona" />
+		
+		<put-attribute name="scripts" value="" />
+		<put-attribute name="ready" value="" />
+		<put-attribute name="functions" value="" />
+
+	</definition>
+</tiles-definitions>
