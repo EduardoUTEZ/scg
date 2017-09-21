@@ -15,7 +15,7 @@ public enum TipoProveedor {
 
 	//Permisos
 	MORAL("Moral"),
-	FISICA("FÃ­sica")
+	FISICA("Física")
 	;
 	
 	private String label;		

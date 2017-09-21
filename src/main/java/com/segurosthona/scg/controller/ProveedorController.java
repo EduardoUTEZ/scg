@@ -186,7 +186,7 @@ public class ProveedorController {
 
 	private void feedList(ModelMap map) {
 
-		//map.put("proveedores", usuarioService.findAll());
+	 map.put("proveedores",proveedorService.findAll());
 	}
 
 	/**

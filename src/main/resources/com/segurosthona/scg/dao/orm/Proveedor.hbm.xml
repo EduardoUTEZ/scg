@@ -62,7 +62,7 @@
         </property>
         
         <property name="telefono">
-        	<column name="telefono" length="10" not-null="true" sql-type="INTEGER"/>
+        	<column name="teléfono" length="10" not-null="true" sql-type="INTEGER"/>
         </property>
         
         

@@ -10,6 +10,7 @@ import com.segurosthona.scg.modelo.entidad.Gastos;
 import com.segurosthona.scg.modelo.entidad.Moneda;
 import com.segurosthona.scg.modelo.entidad.Proveedor;
 import com.segurosthona.scg.modelo.entidad.Usuario;
+import com.segurosthona.scg.util.enums.TipoPresupuesto;
 
 public class GastosForm extends GenericForm<GastosForm, Gastos> {
 
@@ -53,7 +54,9 @@ public class GastosForm extends GenericForm<GastosForm, Gastos> {
 	private String usuarioModifica;
 	
 	private Date fechaModifica;
-
+    
+	
+	private PresupuestoDetalle pptoDestino = new PresupuestoDetalle(TipoPresupuesto.PROGRAMADO);
 	
 	public GastosForm() {
 		Calendar c = Calendar.getInstance();
@@ -221,6 +224,14 @@ public class GastosForm extends GenericForm<GastosForm, Gastos> {
 
 	public void setFechaModifica(Date fechaModifica) {
 		this.fechaModifica = fechaModifica;
+	}
+
+	public PresupuestoDetalle getPptoDestino() {
+		return pptoDestino;
+	}
+
+	public void setPptoDestino(PresupuestoDetalle pptoDestino) {
+		this.pptoDestino = pptoDestino;
 	}
 	
 	

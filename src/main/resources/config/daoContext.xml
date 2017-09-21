@@ -43,7 +43,6 @@
 		<beans:value>com/segurosthona/scg/dao/orm/NombreNivel.hbm.xml</beans:value>
 		<beans:value>com/segurosthona/scg/dao/orm/ClavePresupuestaria.hbm.xml</beans:value>
 		<beans:value>com/segurosthona/scg/dao/orm/Presupuesto.hbm.xml</beans:value>
-		<beans:value>com/segurosthona/scg/dao/orm/EmpresaGrupo.hbm.xml</beans:value>
 		<beans:value>com/segurosthona/scg/dao/orm/SolicitudReasignacion.hbm.xml</beans:value>
 		<beans:value>com/segurosthona/scg/dao/orm/SolicitudReasignacionAprobadaPpto.hbm.xml</beans:value>
 		<beans:value>com/segurosthona/scg/dao/orm/Moneda.hbm.xml</beans:value>

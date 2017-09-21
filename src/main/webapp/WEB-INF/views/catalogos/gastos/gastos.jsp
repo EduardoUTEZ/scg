@@ -108,7 +108,7 @@
 				
 			}else if ($('input:radio[name=tipo]:checked').val()== 'Programada') {
 				
-			alert ("Pantalla en construcción");	
+			window.location.href ="programada/add";
 				
 			}
 		}, function(dismiss) {

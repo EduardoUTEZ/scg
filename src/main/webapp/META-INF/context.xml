@@ -8,7 +8,7 @@
               username="sadsscom_scg" 
               password="sads2017"
               driverClassName="com.mysql.jdbc.Driver"
-              url="jdbc:mysql://localhost/sadsscom_scg"
+              url="jdbc:mysql://sadss.com.mx/sadsscom_scg"
               validationQuery="select 1"
               maxActive="5" 
               maxIdle="10"

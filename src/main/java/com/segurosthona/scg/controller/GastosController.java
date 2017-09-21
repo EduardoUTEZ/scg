@@ -92,6 +92,16 @@ public class GastosController {
 	}
 	
 	
+	@RequestMapping(value = "/programada/add", method = RequestMethod.GET)
+	public ModelAndView addProgramada(Authentication authentication) {
+
+		ModelMap map = new ModelMap();
+		map.put("gasto", new GastosForm());
+		feedCatalogs(map);
+
+		return new ModelAndView("catalogos/gastos/altaEditaSolicitudGastoProgramada", map);
+	}
+	
 	
 	@RequestMapping(value = "/addPartida", method = RequestMethod.GET)
 	public ModelAndView addPartida(Authentication authentication) {
