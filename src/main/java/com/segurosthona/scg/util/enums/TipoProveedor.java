@@ -14,6 +14,7 @@ import java.util.LinkedHashMap;
 public enum TipoProveedor {
 
 	//Permisos
+	SELECCIONE("Seleccione..."),
 	MORAL("Moral"),
 	FISICA("Física")
 	;

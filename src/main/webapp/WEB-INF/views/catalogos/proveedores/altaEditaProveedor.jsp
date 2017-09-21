@@ -42,7 +42,7 @@
 									<div class="form-group label-floating ${status.error ? 'has-error' : ''}">						
 									<label class="control-label"><fmt:message key="catalogo.proveedor.tipoProveedor"/> *</label>									
 									<form:select path="tipoProveedor" required="true" multiple="false" class="select2-container form-control select2me">
-									<form:option value="">Seleccione...</form:option>
+									
 									<form:options items="${tipos}"/>
 								
 								</form:select>															
@@ -57,7 +57,7 @@
 								<label class="control-label"><fmt:message key="catalogo.proveedor.estado"/> *</label>
 								
 								<form:select path="estado" required="true" multiple="false" class="select2-container form-control select2me">
-								<form:option value="">Seleccione...</form:option>
+								
 								<form:options items="${estados}"/>
 								</form:select>														
 								<form:errors path="estado" class="help-block"></form:errors>										

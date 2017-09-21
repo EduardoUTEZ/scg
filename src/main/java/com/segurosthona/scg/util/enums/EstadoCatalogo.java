@@ -14,6 +14,7 @@ import java.util.LinkedHashMap;
 public enum EstadoCatalogo {
 
 	//Permisos
+	SELECCIONE(-1,"Seleccione..."),
 	INACTIVO(0,"Inactivo"),
 	ACTIVO(1,"Activo")
 	;
