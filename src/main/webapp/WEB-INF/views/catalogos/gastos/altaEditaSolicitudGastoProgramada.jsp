@@ -8,7 +8,7 @@
 	<fmt:message key="gastos.programada" var="entity" />
 
 	<tiles:putAttribute name="title">
-		Solicitudes  Gastos
+		Solicitudes de Gastos
 	</tiles:putAttribute>
 
 	<tiles:putAttribute name="body">
