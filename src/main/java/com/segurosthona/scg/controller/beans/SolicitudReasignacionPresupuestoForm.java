@@ -4,12 +4,7 @@ import java.util.Date;
 
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
 import com.segurosthona.scg.modelo.entidad.Empresa;
-import com.segurosthona.scg.modelo.entidad.EmpresaGrupo;
-import com.segurosthona.scg.modelo.entidad.SolicitudReasignacion;
 import com.segurosthona.scg.modelo.entidad.SolicitudReasignacionPresupuesto;
-import com.segurosthona.scg.modelo.entidad.Usuario;
-import com.segurosthona.scg.util.enums.EstadoReasigancion;
-import com.segurosthona.scg.util.enums.TipoPresupuesto;
 
 public class SolicitudReasignacionPresupuestoForm extends
 		GenericForm<SolicitudReasignacionPresupuestoForm, SolicitudReasignacionPresupuesto> {

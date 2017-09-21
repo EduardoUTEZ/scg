@@ -11,7 +11,7 @@ import java.util.LinkedHashMap;
  * @version 1.0
  *
  */
-public enum EstadoUsuario {
+public enum EstadoCatalogo {
 
 	//Permisos
 	INACTIVO(0,"Inactivo"),
@@ -21,8 +21,9 @@ public enum EstadoUsuario {
 	private Integer value;
 	private String label;		
 	
-	private EstadoUsuario(Integer value, String label){
+	private EstadoCatalogo(Integer value, String label){
 		this.label = label;
+		this.value = value;
 	}
 
 	public Integer getValue() {
@@ -46,15 +47,15 @@ public enum EstadoUsuario {
 	 * Obtiene permisos
 	 * @return Regresa la lista de permisos disponibles.
 	 */
-	public static LinkedHashMap<Integer, String> getEstados(){
+	public static LinkedHashMap<String, String> getEstados(){
 		
-		LinkedHashMap<Integer, String> tipopermisos = new LinkedHashMap<Integer, String>();
+		LinkedHashMap<String, String> estados = new LinkedHashMap<String, String>();
 		// permisos estáticos (de acuerdo a funcionalidades sistema)
-		for (EstadoUsuario p : EstadoUsuario.values()) {
-			tipopermisos.put(p.value, p.getLabel());
+		for (EstadoCatalogo p : EstadoCatalogo.values()) {
+			estados.put(p.getValue()+"", p.getLabel());
 		}
 		
-		return tipopermisos;
+		return estados;
 	}
 	
 }

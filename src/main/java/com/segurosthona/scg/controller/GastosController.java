@@ -6,57 +6,36 @@
  */
 package com.segurosthona.scg.controller;
 
-import java.util.Date;
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
 import com.segurosthona.scg.controller.beans.ClavePresupuestariaList;
 import com.segurosthona.scg.controller.beans.GastosForm;
-import com.segurosthona.scg.controller.beans.Mensaje;
-import com.segurosthona.scg.controller.beans.ProveedorForm;
 import com.segurosthona.scg.controller.beans.SolicitudGastosXPartidaForm;
-import com.segurosthona.scg.controller.beans.UsuarioForm;
 import com.segurosthona.scg.controller.beans.generic.GenericModelEditor;
 import com.segurosthona.scg.modelo.entidad.ClavePresupuestaria;
 import com.segurosthona.scg.modelo.entidad.Empresa;
-import com.segurosthona.scg.modelo.entidad.EmpresaGrupo;
 import com.segurosthona.scg.modelo.entidad.Moneda;
 import com.segurosthona.scg.modelo.entidad.Proveedor;
-import com.segurosthona.scg.modelo.entidad.Rol;
 import com.segurosthona.scg.modelo.entidad.Usuario;
 import com.segurosthona.scg.service.ClavePresupuestariaService;
-import com.segurosthona.scg.service.EmpresaGrupoService;
 import com.segurosthona.scg.service.EmpresaService;
 import com.segurosthona.scg.service.GastosService;
 import com.segurosthona.scg.service.MonedaService;
 import com.segurosthona.scg.service.ProveedorService;
-import com.segurosthona.scg.service.RolService;
 import com.segurosthona.scg.service.UsuarioService;
-import com.segurosthona.scg.util.Encripta;
-import com.segurosthona.scg.util.ExceptionUtils;
-import com.segurosthona.scg.util.SecurityUtils;
-import com.segurosthona.scg.util.enums.EstadoUsuario;
 
 @Controller
 @RequestMapping("gastos")

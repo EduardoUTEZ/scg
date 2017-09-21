@@ -3,19 +3,15 @@ package com.segurosthona.scg.controller.beans;
 import java.util.Date;
 
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
-import com.segurosthona.scg.modelo.entidad.EmpresaGrupo;
+import com.segurosthona.scg.modelo.entidad.Empresa;
 import com.segurosthona.scg.modelo.entidad.Proveedor;
 
 public class ProveedorForm extends GenericForm<ProveedorForm, Proveedor>{
 
 	private Integer id;
-	
-	private EmpresaGrupo empresaGrupo;
-
-	private String tipoProveedor;
-	
+	private Empresa empresaGrupo;
+	private String tipoProveedor;	
 	private String razonSocial;
-	
 	private String nombre;
 	
 	private String primerApellido;
@@ -75,11 +71,11 @@ public class ProveedorForm extends GenericForm<ProveedorForm, Proveedor>{
 		this.id = id;
 	}
 
-	public EmpresaGrupo getEmpresaGrupo() {
+	public Empresa getEmpresaGrupo() {
 		return empresaGrupo;
 	}
 
-	public void setEmpresaGrupo(EmpresaGrupo empresaGrupo) {
+	public void setEmpresaGrupo(Empresa empresaGrupo) {
 		this.empresaGrupo = empresaGrupo;
 	}
 

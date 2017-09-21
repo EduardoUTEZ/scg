@@ -42,9 +42,9 @@
 									<div class="form-group label-floating ${status.error ? 'has-error' : ''}">						
 									<label class="control-label"><fmt:message key="catalogo.proveedor.tipoProveedor"/> *</label>									
 									<form:select path="tipoProveedor" required="true" multiple="false" class="select2-container form-control select2me">
-									<form:option value="NONE">Seleccione...</form:option>
-									<form:option value="Moral">Moral</form:option>
-									<form:option value="Física">Física</form:option>
+									<form:option value=""></form:option>
+									<form:options items="${tipos}"/>
+								
 								</form:select>															
 								<form:errors path="tipoProveedor" class="help-block"></form:errors>			
 									</div>
@@ -55,11 +55,11 @@
 								<div class="col-md-4">
 								<div class="form-group label-floating ${status.error ? 'has-error' : ''}">
 								<label class="control-label"><fmt:message key="catalogo.proveedor.estado"/> *</label>
-								<form:select path="estado" required="true"  class="select2-container form-control select2me">
-								<form:option value="NONE">Seleccione...</form:option>
-									<form:option value="1">Activo</form:option>
-									<form:option value="0">Inactivo</form:option>
-								</form:select>															
+								
+								<form:select path="estado" required="true" multiple="false" class="select2-container form-control select2me">
+								<form:option value=""></form:option>
+								<form:options items="${estados}"/>
+								</form:select>														
 								<form:errors path="estado" class="help-block"></form:errors>										
 								</div>
 								</div>
@@ -77,7 +77,7 @@
 							</spring:bind>	
 						</div>
 						
-						<div class="row">
+						<div class="row" id="moral">
 							<spring:bind path="proveedor.razonSocial">
 								<div class="col-md-12">
 									<div class="form-group label-floating ${status.error ? 'has-error' : ''}">						
@@ -88,11 +88,11 @@
 								</div>
 							</spring:bind>
 						</div>
-						<div class="row">
+						<div class="row" id="fisica">
 							<spring:bind path="proveedor.nombre">
 								<div class="col-md-4">
 									<div class="form-group label-floating ${status.error ? 'has-error' : ''}">						
-									<label class="control-label"><fmt:message key="catalogo.proveedor.razonSocial"/> *</label>									
+									<label class="control-label"><fmt:message key="catalogo.proveedor.nombre"/> *</label>									
 									<form:input path="nombre" maxlength="50" required="true" type="text" class="form-control input"   readonly="${empty usuario.id?'false':'true'}"/>					
 									<form:errors path="nombre" class="help-block"></form:errors>		
 									</div>
@@ -350,6 +350,22 @@
 	$('#catalogos').addClass("collapse in");
 	$('#roles_op2').addClass("active");
 	
+	
+	//Muestra los campos de nombre o razon social.
+	var tipo = $("#tipoProveedor").val();
+	if(tipo != "" ){
+		if(tipo =="FISICA"){
+			$("#fisica").show();
+			$("#moral").hide();
+		}else if(tipo =="MORAL"){
+			$("#moral").show();
+			$("#fisica").hide();
+		}
+	}else{
+		$("#fisica").hide();
+		$("#moral").hide();
+	}
+	
 	$('#add').validate({
 		 lang: 'es',
        submitHandler: function(form) {
@@ -364,6 +380,21 @@
     });
 	
 
+	$("#tipoProveedor").change(function(){
+		var tipo = $("#tipoProveedor").val();
+		
+		if(tipo =="FISICA"){
+			$("#fisica").show();
+			$("#moral").hide();
+		}else if(tipo =="MORAL"){
+			$("#moral").show();
+			$("#fisica").hide();
+		}else{
+			$("#fisica").hide();
+			$("#moral").hide();
+		}
+		
+	});
 	
 	
 	</tiles:putAttribute>

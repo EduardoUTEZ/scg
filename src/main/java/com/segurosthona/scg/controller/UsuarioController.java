@@ -40,7 +40,7 @@ import com.segurosthona.scg.service.UsuarioService;
 import com.segurosthona.scg.util.Encripta;
 import com.segurosthona.scg.util.ExceptionUtils;
 import com.segurosthona.scg.util.SecurityUtils;
-import com.segurosthona.scg.util.enums.EstadoUsuario;
+import com.segurosthona.scg.util.enums.EstadoCatalogo;
 
 @Controller
 @RequestMapping("usuarios")
@@ -80,7 +80,7 @@ public class UsuarioController {
 	public ModelAndView add(Authentication authentication) {
 
 		ModelMap map = new ModelMap();
-		map.put("usuario", new UsuarioForm(EstadoUsuario.ACTIVO));
+		map.put("usuario", new UsuarioForm(EstadoCatalogo.ACTIVO));
 		feedCatalogs(map);
 
 		return new ModelAndView("catalogos/usuarios/altaEditaUsuario", map);

@@ -1,12 +1,9 @@
 package com.segurosthona.scg.controller.beans;
 
-import java.io.Serializable;
 import java.util.Date;
 
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
-import com.segurosthona.scg.modelo.entidad.Gastos;
 import com.segurosthona.scg.modelo.entidad.Moneda;
-import com.segurosthona.scg.modelo.generic.GenericModel;
 
 public class MonedaForm  extends GenericForm<MonedaForm,Moneda>{
 	

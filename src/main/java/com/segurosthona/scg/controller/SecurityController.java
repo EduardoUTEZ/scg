@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.segurosthona.scg.modelo.entidad.BitacoraAcceso;
-import com.segurosthona.scg.modelo.entidad.Usuario;
 import com.segurosthona.scg.service.BitacoraAccesoService;
 import com.segurosthona.scg.service.UsuarioService;
 import com.segurosthona.scg.util.SecurityUtils;

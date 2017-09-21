@@ -17,7 +17,7 @@
         </property>
          <property name="estado" column="estado">
     		<type name="org.hibernate.type.EnumType">
-        	<param name="enumClass">com.segurosthona.scg.util.enums.EstadoUsuario</param>
+        	<param name="enumClass">com.segurosthona.scg.util.enums.EstadoCatalogo</param>
     		</type>
 		</property>
          <property name="nombre">

@@ -6,68 +6,39 @@
  */
 package com.segurosthona.scg.controller;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import com.segurosthona.scg.controller.beans.BusquedaPresupuestoForm;
-import com.segurosthona.scg.controller.beans.ClavePresupuestariaForm;
 import com.segurosthona.scg.controller.beans.ClavePresupuestariaList;
-import com.segurosthona.scg.controller.beans.Mensaje;
 import com.segurosthona.scg.controller.beans.PresupuestoDetalle;
 import com.segurosthona.scg.controller.beans.PresupuestoSolicitudRForm;
-import com.segurosthona.scg.controller.beans.SolicitudReasignacionForm;
-import com.segurosthona.scg.controller.beans.SolicitudReasignacionPresupuestoForm;
-import com.segurosthona.scg.controller.beans.generic.FechaEditor;
 import com.segurosthona.scg.controller.beans.generic.GenericModelEditor;
 import com.segurosthona.scg.modelo.entidad.ClavePresupuestaria;
 import com.segurosthona.scg.modelo.entidad.DetalleReasignacion;
 import com.segurosthona.scg.modelo.entidad.Empresa;
-import com.segurosthona.scg.modelo.entidad.Presupuesto;
-import com.segurosthona.scg.modelo.entidad.PresupuestoSolicitudR;
-import com.segurosthona.scg.modelo.entidad.SolicitudReasignacion;
 import com.segurosthona.scg.modelo.entidad.SolicitudReasignacionPresupuesto;
-import com.segurosthona.scg.modelo.entidad.Usuario;
 import com.segurosthona.scg.service.ClavePresupuestariaService;
-import com.segurosthona.scg.service.DetalleReasignacionService;
-import com.segurosthona.scg.service.EmpresaGrupoService;
 import com.segurosthona.scg.service.EmpresaService;
-import com.segurosthona.scg.service.NombreNivelService;
-import com.segurosthona.scg.service.PresupuestoService;
 import com.segurosthona.scg.service.PresupuestoSolicitudRService;
 import com.segurosthona.scg.service.SolicitudReasignacionPresupuestoService;
-import com.segurosthona.scg.service.SolicitudReasignacionService;
-import com.segurosthona.scg.service.UsuarioService;
-import com.segurosthona.scg.util.SecurityUtils;
 
 @Controller
 @RequestMapping("reasignacion")
 public class SolicitudReasignacionPresupuestoController {
 
-	private static final Logger LOG = LoggerFactory.getLogger(SolicitudReasignacionPresupuestoController.class);
 
 	@Autowired
 	MessageSource messageSource;

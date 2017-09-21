@@ -5,13 +5,13 @@ import java.util.Date;
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
 import com.segurosthona.scg.modelo.entidad.Rol;
 import com.segurosthona.scg.modelo.entidad.Usuario;
-import com.segurosthona.scg.util.enums.EstadoUsuario;
+import com.segurosthona.scg.util.enums.EstadoCatalogo;
 
 public class UsuarioForm extends GenericForm<UsuarioForm, Usuario>{
 
 	private Integer id;
 	private String nombreAcceso;
-	private EstadoUsuario estado;
+	private EstadoCatalogo estado;
 	private String claveAcceso;
 	private String claveAcceso2;
 	private String nombre;
@@ -25,7 +25,7 @@ public class UsuarioForm extends GenericForm<UsuarioForm, Usuario>{
 	
 	public UsuarioForm(){}
 	
-	public UsuarioForm(EstadoUsuario estado){
+	public UsuarioForm(EstadoCatalogo estado){
 		this.estado = estado;
 	}
 	public Integer getId() {
@@ -40,10 +40,10 @@ public class UsuarioForm extends GenericForm<UsuarioForm, Usuario>{
 	public void setNombreAcceso(String nombreAcceso) {
 		this.nombreAcceso = nombreAcceso;
 	}
-	public EstadoUsuario getEstado() {
+	public EstadoCatalogo getEstado() {
 		return estado;
 	}
-	public void setEstado(EstadoUsuario estado) {
+	public void setEstado(EstadoCatalogo estado) {
 		this.estado = estado;
 	}
 	public String getClaveAcceso() {

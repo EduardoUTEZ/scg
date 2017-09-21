@@ -2,7 +2,6 @@ package com.segurosthona.scg.controller.beans;
 
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
 import com.segurosthona.scg.modelo.entidad.ClavePresupuestaria;
-import com.segurosthona.scg.modelo.entidad.Presupuesto;
 import com.segurosthona.scg.modelo.entidad.PresupuestoSolicitudR;
 import com.segurosthona.scg.modelo.entidad.SolicitudReasignacionPresupuesto;
 import com.segurosthona.scg.util.enums.TipoPresupuesto;

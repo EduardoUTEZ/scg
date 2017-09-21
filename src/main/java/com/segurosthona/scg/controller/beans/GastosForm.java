@@ -1,17 +1,15 @@
 package com.segurosthona.scg.controller.beans;
 
-import java.io.Serializable;
 import java.util.Calendar;
 import java.util.Date;
 
 import com.segurosthona.scg.controller.beans.generic.GenericForm;
 import com.segurosthona.scg.modelo.entidad.Empresa;
-import com.segurosthona.scg.modelo.entidad.EmpresaGrupo;
+
 import com.segurosthona.scg.modelo.entidad.Gastos;
 import com.segurosthona.scg.modelo.entidad.Moneda;
 import com.segurosthona.scg.modelo.entidad.Proveedor;
 import com.segurosthona.scg.modelo.entidad.Usuario;
-import com.segurosthona.scg.modelo.generic.GenericModel;
 
 public class GastosForm extends GenericForm<GastosForm, Gastos> {
 

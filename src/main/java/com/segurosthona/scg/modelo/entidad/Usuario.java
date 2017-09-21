@@ -7,7 +7,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import com.segurosthona.scg.modelo.generic.GenericModel;
-import com.segurosthona.scg.util.enums.EstadoUsuario;
+import com.segurosthona.scg.util.enums.EstadoCatalogo;
 
 
 
@@ -25,7 +25,7 @@ public class Usuario extends GenericModel<Usuario> implements Serializable {
 	private Integer id;
 	
 	private String nombreAcceso;
-	private EstadoUsuario estado;
+	private EstadoCatalogo estado;
 	private String claveAcceso;
 	private String nombre;
 	private String correoElectronico;
@@ -48,10 +48,10 @@ public class Usuario extends GenericModel<Usuario> implements Serializable {
 	public void setNombreAcceso(String nombreAcceso) {
 		this.nombreAcceso = nombreAcceso;
 	}
-	public EstadoUsuario getEstado() {
+	public EstadoCatalogo getEstado() {
 		return estado;
 	}
-	public void setEstado(EstadoUsuario estado) {
+	public void setEstado(EstadoCatalogo estado) {
 		this.estado = estado;
 	}
 	public String getClaveAcceso() {

@@ -28,15 +28,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.segurosthona.scg.controller.beans.Mensaje;
 import com.segurosthona.scg.controller.beans.ProveedorForm;
-import com.segurosthona.scg.controller.beans.UsuarioForm;
 import com.segurosthona.scg.controller.beans.generic.GenericModelEditor;
 import com.segurosthona.scg.modelo.entidad.Empresa;
 import com.segurosthona.scg.modelo.entidad.Proveedor;
-import com.segurosthona.scg.modelo.entidad.Usuario;
 import com.segurosthona.scg.service.EmpresaService;
 import com.segurosthona.scg.service.ProveedorService;
-import com.segurosthona.scg.util.Encripta;
 import com.segurosthona.scg.util.SecurityUtils;
+import com.segurosthona.scg.util.enums.EstadoCatalogo;
+import com.segurosthona.scg.util.enums.TipoProveedor;
 
 
 
@@ -199,6 +198,8 @@ public class ProveedorController {
 	private void feedCatalogs(ModelMap map) {
 
 		map.put("grupos", empresaService.findAll());
+		map.put("tipos", TipoProveedor.getTipos());
+		map.put("estados", EstadoCatalogo.getEstados());
 	}
 
 }
